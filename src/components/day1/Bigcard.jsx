@@ -4,7 +4,7 @@ import './bigcard.css'
 export default function Bigcard(props) {
     
   return (
-     <div className="card">
+     <div className="card" style={{ backgroundColor: 'white'}}>
     <img src={props.image} alt="Card Image"/>
     <div className="card-content">
       <h2>{props.heading}</h2>
