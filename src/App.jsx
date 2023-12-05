@@ -1,19 +1,17 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import React from "react";
 import "./App.css";
-import RenderCards from "./components/day1/Rendering_bigcard";
 
 
+import SlotMachine from "./components/day2/SlotMachine";
+import NumberGame2 from "./components/day2/Hooks";
 
-function App() {
 
-  
-
+export default function App() {
   return (
     <>
-      <RenderCards/>
+     <NumberGame2/>
     </>
   );
 }
 
-export default App;
