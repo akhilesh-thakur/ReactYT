@@ -2,14 +2,13 @@ import { useRef, useState, useEffect } from "react";
 import React from "react";
 import "./App.css";
 
-
-import DigitalClock from "./components/day3/DigitalClock";
+import LoginForm from './components/day4/LoginForm'
 
 
 export default function App() {
   return (
     <>
-     <DigitalClock/>
+    <LoginForm/>
     </>
   );
 }
