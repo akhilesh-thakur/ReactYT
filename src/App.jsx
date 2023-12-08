@@ -1,15 +1,24 @@
-import { useRef, useState, useEffect } from "react";
-import React from "react";
-import "./App.css";
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/day5_routes/Navbar';
+import Home from './components/day5_routes/Home/Home';
+import About from './components/day5_routes/About';
+import Contact from './components/day5_routes/Contact';
+import Bigcard from './components/day1/Bigcard'
 
-import LoginForm from './components/day4/LoginForm'
-
-
-export default function App() {
+const App = () => {
   return (
-    <>
-    <LoginForm/>
-    </>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/bigcard" element={<Bigcard/>} />
+      </Routes>
+    </Router>
   );
-}
+};
 
+export default App;

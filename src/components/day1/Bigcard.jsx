@@ -1,19 +1,19 @@
-import React from "react";
-import './bigcard.css'
+// import React from "react";
+// import './bigcard.css'
 
-export default function Bigcard(props) {
+// export default function Bigcard(props) {
     
-  return (
-     <div className="card" style={{ backgroundColor: 'white'}}>
-    <img src={props.image} alt="Card Image"/>
-    <div className="card-content">
-      <h2>{props.heading}</h2>
-      <p>{props.para}</p>
-      <a href={props.link} className="button">{props.button}</a>
-    </div>
-  </div>
-  );
-}
+//   return (
+//      <div className="card" style={{ backgroundColor: 'white'}}>
+//     <img src={props.image} alt="Card Image"/>
+//     <div className="card-content">
+//       <h2>{props.heading}</h2>
+//       <p>{props.para}</p>
+//       <a href={props.link} className="button">{props.button}</a>
+//     </div>
+//   </div>
+//   );
+// }
 
 
 
@@ -89,3 +89,37 @@ export default function Bigcard(props) {
 // // call the function inside the return() in the App function
 
 // {data.map(card)} // data is the a func where all our card data have stored
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// New bigcard used in actual page
+
+import React from "react";
+import './bigcard.css'
+
+export default function Bigcard() {
+    
+  return (
+     <div className="card" style={{ backgroundColor: 'white'}}>
+    <img src="../src/components/images/heaven.jpg" alt="Card Image"/>
+    <div className="card-content">
+      <h2>Welcom to PortX card portal</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ratione harum ut, voluptatibus nesciunt voluptate in blanditiis cum repellendus voluptatem at nulla aut!</p>
+      <a href="https://www.react.dev" className="button">Submit</a>
+    </div>
+  </div>
+  );
+}
