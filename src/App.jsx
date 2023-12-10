@@ -6,6 +6,7 @@ import Home from './components/day5_routes/Home/Home';
 import About from './components/day5_routes/About';
 import Contact from './components/day5_routes/Contact';
 import Bigcard from './components/day1/Bigcard'
+import Weather from './components/Day6/Weather';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/weather" element={<Weather />} />
         <Route path="/bigcard" element={<Bigcard/>} />
       </Routes>
     </Router>

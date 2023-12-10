@@ -20,6 +20,9 @@ const Navbar = () => {
           <Link to="/contact" className="text-white">
             Contact
           </Link>
+          <Link to="/weather" className="text-white">
+            Weather App
+          </Link>
           <Link to="/bigcard" className='text-white'>Bigcard</Link>
         </div>
       </div>
