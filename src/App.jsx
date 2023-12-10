@@ -7,6 +7,7 @@ import About from './components/day5_routes/About';
 import Contact from './components/day5_routes/Contact';
 import Bigcard from './components/day1/Bigcard'
 import Weather from './components/Day6/Weather';
+import Game from './components/Day7/TicTacToe'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/weather" element={<Weather />} />
         <Route path="/bigcard" element={<Bigcard/>} />
+        <Route path="/tictactoe" element={<Game/>} />
       </Routes>
     </Router>
   );

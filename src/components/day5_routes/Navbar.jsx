@@ -23,7 +23,12 @@ const Navbar = () => {
           <Link to="/weather" className="text-white">
             Weather App
           </Link>
-          <Link to="/bigcard" className='text-white'>Bigcard</Link>
+          <Link to="/bigcard" className='text-white'>
+            Bigcard
+            </Link>
+          <Link to="/tictactoe" className='text-white'>
+            Tic-Tac-Toe
+            </Link>
         </div>
       </div>
     </nav>
