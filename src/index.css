@@ -1,4 +1,43 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* css of the dropdown on the Navbar */
+
+.daywise {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #007bff; /* Blue color */
+  color: #ffffff; /* White text color */
+  text-decoration: none;
+  border-radius: 5px; /* Optional: Add rounded corners */
+  transition: background-color 0.3s ease;
+}
+
+/* the following css is of the drop drown situated on the Navbar */
+
+.nav-item {
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  top: 54px;
+  right: 71px;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-item {
+  cursor: pointer;
+  padding: 5px;
+  color: white;
+}
+
+/* Optional: Style for the active dropdown item */
+.dropdown-item:hover {
+  background-color: #0056b3;
+  border-radius: 7px;
+}
