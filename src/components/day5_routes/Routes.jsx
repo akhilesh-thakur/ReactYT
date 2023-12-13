@@ -12,6 +12,7 @@ import Bigcard from '../day1/Bigcard'
 import Weather from '../Day6/Weather';
 import Game from '../Day7/TicTacToe'
 import RenderNewsCard from '../day8/RenderNewsCard';
+import RenderNewsAPIcard from '../day9/RenderNewsAPIcard';
 
 const Routes1 = () => {
   return (
@@ -25,6 +26,7 @@ const Routes1 = () => {
         <Route path="/bigcard" element={<Bigcard/>} />
         <Route path="/tictactoe" element={<Game/>} />
         <Route path='/daywise/day8' element={<RenderNewsCard/>} />
+        <Route path='/daywise/day9' element={<RenderNewsAPIcard/>} />
       </Routes>
     </Router>
   );
