@@ -3,6 +3,10 @@ import NewsAPIcard from "./NewsAPIcard";
 
 export default function RenderNewsAPIcard() {
 
+    useEffect(() => {
+        document.body.style.background = "black"
+    })
+
 
     const [NewsAPIdata, setNewsAPIdata] = useState([]);
 
