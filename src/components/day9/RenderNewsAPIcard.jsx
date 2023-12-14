@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from "react";
 import NewsAPIcard from "./NewsAPIcard";
 
+// importing spinner component form the Day10 folder
+import Spinner from "../day10/Spinner";
+
 export default function RenderNewsAPIcard() {
+
+  // state for loading component
+
+  const [Loading, setLoading] = useState(true)
+
   useEffect(() => {
-    document.body.style.background = "black";
+    document.body.style.background = "#0F172A";
   });
 
   const [NewsAPIdata, setNewsAPIdata] = useState([]);
@@ -19,6 +27,7 @@ export default function RenderNewsAPIcard() {
         );
         const data = await response.json();
         setNewsAPIdata(data.articles);
+        setLoading(false); // Loading is false after rendering
       } catch (error) {
         console.error("Error fetching news data:", error);
       }
@@ -45,6 +54,12 @@ export default function RenderNewsAPIcard() {
           from the real API
         </h1>
       </div>
+      {
+        Loading && (
+          <Spinner/>
+        )
+      }
+      
       <div className="flex justify-center items-center flex-wrap bg-slate-900">
         {NewsAPIdata.map((value, index) => (
           <NewsAPIcard key={index} {...value} />

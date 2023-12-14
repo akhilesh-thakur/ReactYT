@@ -51,8 +51,8 @@ const Navbar = () => {
                   <Link to="/daywise/day9" className="dropdown-item">
                     Day9 - NewsAPI
                   </Link>
-                  <Link to="/service/service3" className="dropdown-item">
-                    Service 3
+                  <Link to="/daywise/day10" className="dropdown-item">
+                    Day10 - UpdateNewsAPI
                   </Link>
                   <Link to="/service/service3" className="dropdown-item">
                     Service 3
