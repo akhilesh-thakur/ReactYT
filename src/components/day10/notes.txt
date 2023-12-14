@@ -1,0 +1,7 @@
+Today I modified the News app which I created yesterday. 
+I added few functionality like :
+
+1. to toggle between pages using the Previous and Next buttons
+The buttons will disabled when it reaches the maximum page limit meaning when there is no more data to display in the last page it will automatically turn to grey and the same goes with the first page where the Previous button will turns to grey and disabled.
+
+2. Displaying Loading Spinner till the page load
