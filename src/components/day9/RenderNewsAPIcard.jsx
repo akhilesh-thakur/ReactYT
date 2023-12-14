@@ -1,32 +1,41 @@
-import React, {useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import NewsAPIcard from "./NewsAPIcard";
 
 export default function RenderNewsAPIcard() {
+  useEffect(() => {
+    document.body.style.background = "black";
+  });
 
-    useEffect(() => {
-        document.body.style.background = "black"
-    })
+  const [NewsAPIdata, setNewsAPIdata] = useState([]);
+  const [currentPage, setcurrentPage] = useState(1);
+  const pageSize = 21;
 
-
-    const [NewsAPIdata, setNewsAPIdata] = useState([]);
-
-    useEffect(() => {
-      const fetchNewsData = async () => {
-        try {
-            const apiKey = import.meta.env.VITE_REACT_APP_API_KEY;
-          const response = await fetch(
-            `https://newsapi.org/v2/everything?q=tesla&from=2023-11-13&sortBy=publishedAt&apiKey=${apiKey}`
-          );
-          const data = await response.json();
-          setNewsAPIdata(data.articles);
-        } catch (error) {
-          console.error('Error fetching news data:', error);
-        }
-    }
+  useEffect(() => {
+    const fetchNewsData = async () => {
+      try {
+        const apiKey = import.meta.env.VITE_REACT_APP_API_KEY;
+        const response = await fetch(
+          `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apiKey}&pageSize=${pageSize}&page=${currentPage}`
+        );
+        const data = await response.json();
+        setNewsAPIdata(data.articles);
+      } catch (error) {
+        console.error("Error fetching news data:", error);
+      }
+    };
 
     fetchNewsData();
-}, []); 
+  }, [currentPage]);
 
+  // bottom buttons function goes here..
+
+  const pervPage = () => {
+    setcurrentPage((prevPage) => prevPage - 1);
+  }
+
+  const nextPage = () => {
+    setcurrentPage((prevPage) => prevPage + 1);
+  }
 
   return (
     <>
@@ -40,6 +49,20 @@ export default function RenderNewsAPIcard() {
         {NewsAPIdata.map((value, index) => (
           <NewsAPIcard key={index} {...value} />
         ))}
+      </div>
+      <div className="flex justify-around p-12 bg-slate-900">
+        <button 
+        onClick={pervPage} 
+        disabled={currentPage === 1} 
+        className={`bg-${currentPage === 1 ? "slate-700": "blue-500"} hover:bg-${currentPage === 1? false: "blue-700"} text-white font-bold py-2 px-4 rounded-l`}>
+        &larr; Previous
+        </button>
+        <button 
+        onClick={nextPage} 
+        disabled={NewsAPIdata.length < pageSize} 
+        className={`bg-${NewsAPIdata.length < pageSize ? "slate-700": "blue-500"} hover:bg-${NewsAPIdata.length < pageSize? false: "blue-700"} text-white font-bold py-2 px-4 rounded-r`}>
+          Next &rarr;
+        </button>
       </div>
     </>
   );
