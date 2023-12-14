@@ -1,6 +1,6 @@
 import React from "react";
 
-const NewsAPIcard = ({ title, description, urlToImage, url }) => {
+const NewsAPIcard = ({ title, description, urlToImage, url, author, publishedAt }) => {
 
   return (
     <div
@@ -10,6 +10,7 @@ const NewsAPIcard = ({ title, description, urlToImage, url }) => {
       {urlToImage && <img className="w-full" src={urlToImage} alt="News" />}
       <div className="px-6 py-4 h-52 object-cover">
         <div className="font-bold text-xl mb-2">{title}</div>
+        <p className=" text-slate-500 text-sm mb-2 font-sans font-bold">By {(!author)? "unknown":author} On {new Date(publishedAt).toGMTString()}</p>
         <p className="text-gray-700 text-base">{description}</p>
       </div>
       {url && (

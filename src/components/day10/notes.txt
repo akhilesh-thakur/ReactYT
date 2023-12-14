@@ -5,3 +5,5 @@ I added few functionality like :
 The buttons will disabled when it reaches the maximum page limit meaning when there is no more data to display in the last page it will automatically turn to grey and the same goes with the first page where the Previous button will turns to grey and disabled.
 
 2. Displaying Loading Spinner till the page load
+
+3. Added Author name and Time Stamp
