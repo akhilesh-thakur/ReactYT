@@ -54,10 +54,10 @@ const Navbar = () => {
                   <Link to="/daywise/day10" className="dropdown-item">
                     Day10 - UpdateNewsAPI
                   </Link>
-                  <Link to="/service/service3" className="dropdown-item">
-                    Service 3
+                  <Link to="/daywise/day11" className="dropdown-item">
+                  Day11 - NewsByCat
                   </Link>
-                  <Link to="/service/service3" className="dropdown-item">
+                  <Link to="/daywise/day12" className="dropdown-item">
                     Service 3
                   </Link>
                 </div>

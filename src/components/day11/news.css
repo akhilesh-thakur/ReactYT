@@ -1,0 +1,27 @@
+.papa{
+    width: 100vw;
+    height: 89vh;
+    background: pink;
+    
+}
+
+.sidebar{
+    display: flex;
+    justify-content: center;
+    color: white;
+    border-top: 2px solid black;
+}
+
+.sidebar ul {
+    margin-top: 16px;
+    
+}
+
+.sidebar ul li{
+    padding: 8px;
+    margin-top: 14px;
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+
+}

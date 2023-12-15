@@ -14,6 +14,7 @@ import Game from '../Day7/TicTacToe'
 import RenderNewsCard from '../day8/RenderNewsCard';
 import RenderNewsAPIcard from '../day9/RenderNewsAPIcard';
 import Spinner from '../day10/Spinner';
+import TopHeadlinesMain from '../day11/TopHeadlinesMain';
 
 const Routes1 = () => {
   return (
@@ -29,6 +30,10 @@ const Routes1 = () => {
         <Route path='/daywise/day8' element={<RenderNewsCard/>} />
         <Route path='/daywise/day9' element={<RenderNewsAPIcard/>} />
         <Route path='/daywise/day10' element={<><h1 className=' text-white font-bold p-5 text-2xl'>This feature were added in the previous component(day9)</h1><Spinner/></>} />
+
+        <Route path='/daywise/day11' element={<TopHeadlinesMain/>} >
+
+        </Route>
       </Routes>
     </Router>
   );
