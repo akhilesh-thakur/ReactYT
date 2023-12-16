@@ -58,7 +58,7 @@ const Navbar = () => {
                   Day11 - NewsByCat
                   </Link>
                   <Link to="/daywise/day12" className="dropdown-item">
-                    Service 3
+                    Day 12 - Fb
                   </Link>
                 </div>
               )}
