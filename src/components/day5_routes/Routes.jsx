@@ -15,7 +15,7 @@ import RenderNewsCard from '../day8/RenderNewsCard';
 import RenderNewsAPIcard from '../day9/RenderNewsAPIcard';
 import Spinner from '../day10/Spinner';
 import TopHeadlinesMain from '../day11/TopHeadlinesMain';
-import Fb from '../day11/Fb';
+import Fb from '../day12_fb/Fb';
 
 const Routes1 = () => {
   return (
